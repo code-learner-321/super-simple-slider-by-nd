@@ -1,0 +1,22 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-super-simple-slider-by-nd {
+	margin: 0px;
+	padding: 0px;
+	background-color: antiquewhite;
+	.title{
+		width: 100%;
+	}
+}
+.panel-column{
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	.fontLabel{
+		padding-bottom: 12px;
+	}
+}

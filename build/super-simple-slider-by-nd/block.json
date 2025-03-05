@@ -1,0 +1,344 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/super-simple-slider-by-nd",
+  "version": "0.1.0",
+  "title": "Super Simple Slider By Nd",
+  "category": "widgets",
+  "icon": "slides",
+  "description": "Super Simple Image Slider With Custom Post Type Based.",
+  "example": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "div"
+    },
+    "sliderHeight": {
+      "type": "number",
+      "default": "100"
+    },
+    "sliderHeightTablet": {
+      "type": "number",
+      "default": "100"
+    },
+    "sliderHeightMobile": {
+      "type": "number",
+      "default": "100"
+    },
+    "firstFieldFontSize": {
+      "type": "number",
+      "default": "12"
+    },
+    "secondFieldFontSize": {
+      "type": "number",
+      "default": "12"
+    },
+    "thirdFieldFontSize": {
+      "type": "number",
+      "default": "12"
+    },
+    "firstFieldfontWeight": {
+      "type": "string",
+      "default": "normal"
+    },
+    "secondFieldfontWeight": {
+      "type": "string",
+      "default": "normal"
+    },
+    "thirdFieldfontWeight": {
+      "type": "string",
+      "default": "normal"
+    },
+    "textColorFirstField": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "textColorSecondField": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "textColorThirdField": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "fontFamilyFirstField": {
+      "type": "string",
+      "default": "Arial"
+    },
+    "sliderDesktopSize": {
+      "type": "number"
+    },
+    "sliderTabletSize": {
+      "type": "number"
+    },
+    "sliderMobileSize": {
+      "type": "number"
+    },
+    "sliderDesktopSizeSecondField": {
+      "type": "number"
+    },
+    "sliderTabletSizeSecondField": {
+      "type": "number"
+    },
+    "sliderMobileSizeSecondField": {
+      "type": "number"
+    },
+    "sliderDesktopSizeThirdField": {
+      "type": "number"
+    },
+    "sliderTabletSizeThirdField": {
+      "type": "number"
+    },
+    "sliderMobileSizeThirdField": {
+      "type": "number"
+    },
+    "paddingAll": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingRight": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingLeft": {
+      "type": "number",
+      "default": 0
+    },
+    "adjustAllPadding": {
+      "type": "boolean",
+      "default": false
+    },
+    "paddingAllTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingTopTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingRightTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingBottomTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingLeftTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "adjustAllPaddingTablet": {
+      "type": "boolean",
+      "default": false
+    },
+    "paddingAllMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingTopMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingRightMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingBottomMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "paddingLeftMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "adjustAllPaddingMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "secondFieldPaddingAllDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingTopDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingRightDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingBottomDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingLeftDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldAdjustAllPaddingDesktop": {
+      "type": "boolean",
+      "default": false
+    },
+    "secondFieldPaddingAllTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingTopTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingRightTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingBottomTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingLeftTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldAdjustAllPaddingTablet": {
+      "type": "boolean",
+      "default": false
+    },
+    "secondFieldPaddingAllMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingTopMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingRightMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingBottomMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldPaddingLeftMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "secondFieldAdjustAllPaddingMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "thirdFieldPaddingAllDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingTopDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingRightDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingBottomDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingLeftDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldAdjustAllPaddingDesktop": {
+      "type": "boolean",
+      "default": false
+    },
+    "thirdFieldPaddingAllTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingTopTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingRightTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingBottomTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingLeftTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldAdjustAllPaddingTablet": {
+      "type": "boolean",
+      "default": false
+    },
+    "thirdFieldPaddingAllMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingTopMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingRightMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingBottomMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldPaddingLeftMobile": {
+      "type": "number",
+      "default": 0
+    },
+    "thirdFieldAdjustAllPaddingMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "alignItems": {
+      "type": "string",
+      "default": "stretch"
+    },
+    "justifyContent": {
+      "type": "string",
+      "default": "flex-start"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "rgba(255, 255, 255, 1)"
+    },
+    "opacity": {
+      "type": "number",
+      "default": 100
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full",
+      "center"
+    ],
+    "customClassName": false
+  },
+  "textdomain": "super-simple-slider-by-nd",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
