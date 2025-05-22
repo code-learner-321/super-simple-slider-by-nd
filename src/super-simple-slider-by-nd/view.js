@@ -4,6 +4,8 @@ document.querySelectorAll(".slider").forEach((slider) => {
 	let index = 0;
 	let autoPlayInterval;
 
+    const sliderInterval = parseInt(slider.dataset.sliderInterval) || 3000;
+
 	const updateSlidePosition = () => {
 		slides.style.transform = `translateX(-${index * 100}%)`;
 	};
@@ -27,8 +29,8 @@ document.querySelectorAll(".slider").forEach((slider) => {
 
 	const resetAutoPlay = () => {
 		clearInterval(autoPlayInterval);
-		autoPlayInterval = setInterval(autoPlay, 3000); // Change image every 3 seconds
+		autoPlayInterval = setInterval(autoPlay, sliderInterval); // Change image every 3 seconds
 	};
 
-	autoPlayInterval = setInterval(autoPlay, 3000);
+	autoPlayInterval = setInterval(autoPlay, sliderInterval);
 });

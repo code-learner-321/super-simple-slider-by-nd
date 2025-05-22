@@ -9,6 +9,7 @@ import {
 import { useState, useRef, useEffect } from "react";
 
 const commonSliderSettings = ({
+	sliderInterval,
 	sliderHeight,
 	sliderHeightTablet,
 	sliderHeightMobile,
@@ -131,6 +132,9 @@ const commonSliderSettings = ({
 		const rgbaColor = backgroundColorToRgba(backgroundColor, newOpacity / 100);
 		setAttributes({ opacity: newOpacity, backgroundColor: rgbaColor });
 	};
+	const handleSliderInterval = (interval) => {
+		setAttributes({sliderInterval:interval})
+	}
 
 	const hexToRgba = (hex, alpha) => {
 		let r = 0,
@@ -230,6 +234,16 @@ const commonSliderSettings = ({
 					onChange={onOpacityChange}
 					min={0}
 					max={100}
+				/>
+			</PanelBody>
+			<PanelBody title="Image Slider Interval Settings" initialOpen={false}>
+				<RangeControl
+					label="Set Interval"
+					value={sliderInterval}
+					onChange={handleSliderInterval}
+					min={1000}
+					max={10000}
+					step={500}
 				/>
 			</PanelBody>
 		</>

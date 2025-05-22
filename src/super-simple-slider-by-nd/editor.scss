@@ -6,8 +6,11 @@
 
 .wp-block-create-block-super-simple-slider-by-nd {
 	margin: 0px;
-	padding: 0px;
-	background-color: antiquewhite;
+	color: #606060;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: #fafaff;
+	border: 1px solid #c3c3df;	
 	.title{
 		width: 100%;
 	}
@@ -19,4 +22,7 @@
 	.fontLabel{
 		padding-bottom: 12px;
 	}
+}
+.select-cat{
+	padding: 10px;
 }

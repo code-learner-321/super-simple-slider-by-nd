@@ -14,17 +14,33 @@
             "source": "html",
             "selector": "div"
         },
+		"captionTextFirstField":{
+			"type":"string",
+			"default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+		},
+		"captionTextSecondField":{
+			"type":"string",
+			"default":"must explain to you how all this mistaken idea of denouncing pleasure and praising pain"
+		},
+		"captionTextThirdField":{
+			"type":"string",
+			"default":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium"
+		},
+		"sliderInterval":{
+			"type":"number",
+			"default":1000
+		},
 		"sliderHeight":{
 			"type":"number",
-			"default":"100"
+			"default":"50"
 		},
 		"sliderHeightTablet":{
 			"type":"number",
-			"default":"100"
+			"default":"50"
 		},
 		"sliderHeightMobile":{
 			"type":"number",
-			"default":"100"
+			"default":"50"
 		},
 		"firstFieldFontSize":{
 			"type":"number",
@@ -320,11 +336,23 @@
         },
 		"backgroundColor": {
             "type": "string",
-            "default": "rgba(255, 255, 255, 1)"
+            "default": "rgba(0, 0, 0, 0.5)"
         },
         "opacity": {
             "type": "number",
-            "default": 100
+            "default": 50
+        },
+		"imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": ""
+        },
+		"selectedSliderCategory": {
+            "type": "string",
+            "default": ""
         }
 	},
 	"supports": {

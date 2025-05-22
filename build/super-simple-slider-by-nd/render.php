@@ -1,6 +1,7 @@
 <div <?php echo get_block_wrapper_attributes(); ?>>
     <?php
     $unique_id = uniqid('super_simple_slider_by_nd');
+
     // Background Layer Opacity..
     $background_color = isset($attributes['backgroundColor']) ? esc_attr($attributes['backgroundColor']) : 'rgba(255, 255, 255, 1)';
 
@@ -113,16 +114,27 @@
     $alignItems = $attributes['alignItems'];
     $justifyContent = $attributes['justifyContent'];
 
-    $category_id = 3;
-    $wp_query = new WP_Query(
-        array(
-            'cat' => $category_id,
-            'post_type' => 'super_simple_slider',
-            'post_status' => 'publish'
-        )
+
+    $selectedSliderCategory_id = $attributes['selectedSliderCategory'];
+    $category_id = isset($selectedSliderCategory_id) ? $selectedSliderCategory_id : '';
+    $sliderInterval = isset($attributes['sliderInterval']) ? $attributes['sliderInterval'] : 1000;
+
+   
+    $args = array(
+        'post_type' => 'super_simple_slider',
+        'posts_per_page' => -1,
+        'tax_query' => $category_id ? array(
+            array(
+                'taxonomy' => 'simple_slider_category_by_nd',
+                'field'    => 'term_id',
+                'terms'    => $category_id,
+            ),
+        ) : array(),
     );
+
+    $wp_query = new WP_Query($args);
     ?>
-    <div class="slider <?php echo $unique_id; ?>">
+    <div class="slider <?php echo $unique_id; ?> " data-slider-interval="<?php echo esc_attr($sliderInterval); ?>">
         <div class="slides">
             <?php
             if ($wp_query->have_posts()) :
@@ -167,6 +179,9 @@
                 <?php endwhile;
             else : ?>
                 <p><?php echo _e('No posts found in the Sports category.', 'textdomain'); ?></p>
+                <?php
+                    echo $category_id;
+                ?>
             <?php endif;
             wp_reset_postdata();
             ?>
