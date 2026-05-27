@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name:       Super Simple Slider By Nd
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Super Simple Slider By Nd is a lightweight, developer-friendly WordPress Gutenberg block slider to easily manage image sliders using Custom Post Types.
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Author:            Najubudeen
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       super-simple-slider-by-nd
@@ -224,4 +224,3 @@ function debug_super_simple_image_slide_metaboxes()
 add_action('add_meta_boxes', 'debug_super_simple_image_slide_metaboxes', 11);
 
 // PASSING ATTRIBUTE CALLED SLIDER INTERVAL INTO VIEW.JS...
-
